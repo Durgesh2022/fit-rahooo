@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+             body{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+
+/* Navigation */
+nav{
+    float: left;
+    margin: 0;
+    overflow:hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 383px;
+    
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    
+}
+
+nav ul li{
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav > ul > li > a{
+    color: white;
+    display: block;
+    line-height: 2em;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    
+}
+li a:hover:not(.active) {
+  background-color: #3b1717;
+}
+
+.logo-img{
+    float: left;
+    position: relative;
+    margin: 10px 15px 15px 10px;
+}
+.bg-div{
+   background:#090808;
+   overflow: hidden;
+}
+.name{
+    color: aliceblue;
+    float: center;
+}
+
+        .mybody{
+            margin-top: 0px;
+            display: block;
+            background-image: url("istockphoto-1213615970-612x612.jpg");
+            background-attachment: fixed; 
+            background-size: 100% 100%; 
+            backdrop-filter: 20px;          
+        }
+
+        .mybody h1{
+            color: rgb(7, 7, 7);
+        }
+        .color{
+            color:rgb(11, 11, 11);
+            font-size:30px;
+            
+        }
+        .button{
+            background-color: #10a6dc; 
+            border: 4px solid black;
+            color: rgb(10, 9, 9);
+            padding: 13px 36px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            
+        }
+        .button1{
+            background-color: #10a6dc; 
+            border: 4px solid rgb(6, 7, 7);
+            color: rgb(10, 9, 9);
+            padding: 6px 36px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            
+        }
+        .t1{
+            background-color:white;
+
+        }
+        @media screen and (max-width: 767px) {
+            nav {
+              position: static;
+              float: none;
+              left: 0;
+              display: none;
+            }
+          
+            nav ul li {
+              display: block;
+              text-align: center;
+            }
+          
+            nav > ul > li > a {
+              display: inline-block;
+              padding: 10px;
+            }
+          
+            .logo-img {
+              float: none;
+              margin: 10px auto;
+              display: block;
+            }
+          
+            .name {
+              font-size: 2em;
+              text-align: center;
+            }
+          
+            .center {
+              top: 50%;
+            }
+          }
+          
+          @media screen and (min-width: 768px) {
+            nav {
+              display: block;
+            }
+          
+            .logo-img {
+              margin: 10px 15px 15px 10px;
+            }
+          
+            .name {
+              font-size: 4em;
+            }
+          }
+        
+
+        </style>
+        </head>
+        <body class="mybody">
+            <div class="bg-div">
+                <img class="logo-img" src="logo2.jpg" width="130" height="130" ALT="align box" ALIGN=CENTER>
+                <nav>
+                    <b><p class="name" style="font-size:4em;"><i>Fit rahoo!!</i></p></b>
+                    <ul>
+                        <li><a href="index.html"><b>Home</b></a></li>
+            <li><a href="index2.html"><b>Registration Form</b></a></li>
+           
+            <li><a href="index3.html"><b>About me</b></a></li>
+            <li><a href="index4.html"><b>Contact us</b></a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+       <center><h1 style="font-size:6em;">Registration form</h1>
+        <form onsubmit="return validation()">
+            <table class="color"><b>
+            <tr>
+            <td><label for="name"><b>Enter name:  </b></label></td>
+            <td ><input type="text" id="name" name="name" style="border:4px solid black;" class="t1" ><br></td>
+            </tr>
+            <tr>
+                <td><label for="name"><b>Date of birth:  </b> </label></td>
+                    <td ><input type="date" id="dob" name="dob" style="border:4px solid black;" class="t1" ><br></td>
+            </tr>
+            <tr>
+                <td><label for="gender"><b>Gender: </b></label> </td>
+                    <td ><input type="radio" id="gender" name="gender" class="t1" value="male"/><b>Male</b> 
+                        <input type="radio" id="gender" name="gender" class="t1" value="female"/><b>Female </b><br></td>
+            </tr>
+            <tr>
+                <td><label for="name"><b>Mobile number:</b></label></td>
+                    <td ><input type="tel" id="tel" name="tel" style="border:4px solid black;"class="t1" ><br></td>
+            </tr>
+            <tr>
+                <td><label for="name"><b>Email id:</b></label></td>
+                    <td ><input type="email" id="email" name="email" style="border:4px solid black;"class="t1" ><br></td>
+            </tr>
+            <tr>
+                <td><label for="name"><b>Password:</b></label></td>
+                    <td ><input type="password" id="password" name="password" style="border:4px solid black;"class="t1" ><br></td>
+            </tr>
+            <tr>
+                <td><label for="name"><b>Retype Password:</b></label> </td>
+                    <td ><input type="password" id="retype" name="retype" style="border:4px solid black;"class="t1" ><br></td>
+            </tr>
+            <tr>
+            
+                <td >
+                <button id="sumit" class="button1" onclick="validation()"><b>Select your levels-></b></button></td>
+        </tr>
+
+
+            </table>
+            </form></center>
+
+            <script>
+                function validation(){
+                    var name = String(document.getElementById("name").value);
+                    var dob = String(document.getElementById("dob").value);
+                    var gender  = String(document.getElementById("gender").value);
+                    var tel = Number(document.getElementById("tel").value);
+                    var email = String(document.getElementById("email").value);
+                    var password = Number(document.getElementById("password").value);
+                    var retype = Number(document.getElementById("retype").value);
+                    var len = password.length;
+                    
+                    
+                     if(name == '' ?? dob == '' ?? gender=='' ?? tel == '' ?? email == ''?? password == ''?? retype == ''){
+                         alert("Enter all the fields");
+                         return False;
+                     }
+                      else if(password != retype){
+                          alert("Password and Retypepassword not matching !! Try again");
+                          return False;
+                      }
+                      else if(len < 6){
+                          alert("Password must be atleast 6 characters . Enter again");
+                          return False;
+                      }
+                      else if(isNaN(tel)){
+                          alert("Enter only number in Mobile Number field");
+                          return False;
+                     }
+                     else{
+                        window.open("index5.html");
+                     }
+                    
+                    
+                }
+                
+                </script>
+                
+    
+            
+            </body>
+            </html>
